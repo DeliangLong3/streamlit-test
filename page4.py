@@ -6,7 +6,7 @@ with st.sidebar:
         st.write(f"你好,{name}，谢谢你参与测试")
 
 
-column1,column2,column3=st.columns([2,2,1])
+column1,column2,column3=st.columns([1,1,1])
 with column1:
     password=st.text_input("你能打开这个网页吗？：")
     if password:
@@ -18,7 +18,7 @@ with column2:
         st.write(f"看来你认为这个网页挺{paragraph}嘛！😄")
 
 with column3:
-    score=st.number_input("请给这个网页打个分数吧：",value=None,max_value=100,step=10)
+    score=st.slider("请给这个网页打个分数吧：",value=None,max_value=100,step=10)
     if score:
         st.write(f"你打的分数是：{score}分，谢谢你的评估和打分。")
 
